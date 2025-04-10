@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/styles" />
+</head>
+<body>
+    <header>
+        <div class="row p-3" styles="align-items:center;">
+            <div class="col-4"><span class="text-white">Minimalistic</span> Piano</div>
+            <div class="col"><a class="" href="/piano/index">play</a></div>
+            <div class="col"><a class="" href="/user/login">login</a></div>
+            <div class="col"><a class="" href="/user/register">register</a></div>
+        </div>
+    </header>
+    <main class="d-flex flex-column h-100">
+        {% block main %}
+        {% endblock %}
+    </main>
+    <footer></footer>
+</body>
+</html>

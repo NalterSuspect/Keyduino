@@ -1,0 +1,13 @@
+{% extends '../layout.html.twig' %}
+
+
+{% block main %}
+<div class="login h-100 w-100">
+    <form action="login" method="post" class="mt-5 rounded gap-5 w-50 m-auto d-flex flex-column p-3 text-center  justify-content-center items-align-center" >
+            <h3>Login...</h3>
+            <input type="text" placeholder="Username" name="username" id="username">
+            <input type="text" placeholder="Password" name="password" id="password">
+            <button class="btn btn-dark"> login </button>
+        </form>
+</div>
+{% endblock %}

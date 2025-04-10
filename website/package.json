@@ -1,0 +1,22 @@
+{
+  "name": "keyduino",
+  "version": "1.0.0",
+  "description": "minimalistic piano",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www",
+    "serve": "nodemon --exec npm start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bootstrap": "^5.3.3",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "sqlite3": "^5.1.7",
+    "twig": "^1.17.1",
+    "ws": "^8.18.1"
+  }
+}

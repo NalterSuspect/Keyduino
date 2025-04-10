@@ -1,0 +1,63 @@
+{% extends '../layout.html.twig' %}
+
+{% block main %}
+    <div class="container mb-5 mt-5 color-main-dark">
+
+        <div class="row gap-3">
+            <div class="col">
+
+                <div class="row color-second-dark p-3 rounded border-grey h-100">
+                    <div class="col d-flex flex-column align-items-center justify-content-center gap-3">
+                        <h4>Volume</h4>
+
+                        <div class="potentiometer">
+                            <input id="volume-knob" type="range" min="0" max="100" value="{{ volume }}" class="slider" id="potentiometer">
+                        </div>
+                        <div id="volume-meter" class="rounded color-main-dark px-2 py-1">
+                            {{volume}}
+                        </div>
+                    </div>
+                    <div class="col d-flex flex-column align-items-center justify-content-center gap-3">
+                        <h4>Pitch</h4>
+                        <div class="potentiometer">
+                            <input id="pitch-knob" type="range" min="0" max="100" value="{{ pitch }}" class="slider" id="potentiometer">
+                        </div>
+                        <div id="pitch-meter" class="rounded color-main-dark px-2 py-1">
+                            {{pitch}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+                <div class="row color-second-dark p-3 rounded border-grey">
+                    <h4>Oscilloscope</h4>
+                    <canvas id="pwmCanvas" width="500" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="keyboard row mt-5 pb-5 color-second-dark">
+        <div class="col-2 border-grey-top"></div>
+        {% for note in notes %}
+            <div class="key-container border-top-0 col-1 border-grey d-flex flex-column align-items-center gap-3 py-3">
+                <div id='light-{{ note }}' class="key-light off">
+
+                </div>
+                <div id="{{ note }}" class="key rounded">
+
+                </div>
+                <div class="key-name rounded color-purple px-3">
+                    {{note}}
+                </div>
+            </div>
+        {% endfor %}
+        <div class="col-3 border-grey-top"></div>
+    </div>
+
+    <script src="/scripts/oscilloscope.js"></script>
+    <script src="/scripts/websocket.js"></script>
+{% endblock %}

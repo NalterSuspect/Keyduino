@@ -1,0 +1,140 @@
+:root {
+    --main_dark: #171717;
+    --second_dark: #222327;
+    --grey: #AAA6A6;
+    --green: #30CACA;
+    --purple: #9E7BC3;
+}
+
+.color-main-dark{
+    background-color: var(--main_dark);
+}
+
+.color-second-dark{
+    background-color: var(--second_dark);
+}
+.color-grey{
+    background-color: var(--grey);
+}
+
+.color-green{
+    background-color: var(--green);
+}
+
+.color-purple{
+    background-color: var(--purple);
+}
+
+body{
+    background-color: var(--main_dark);
+    color:var(--grey);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    color: var(--grey);
+}
+
+.border-grey{
+    border: var(--grey) solid 1px;
+}
+
+.potentiometer {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: var(--main_dark);
+    border: var(--grey) solid 3px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+}
+
+.slider::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--green);
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--green);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.keyboard{
+    
+}
+
+.key-container{
+    background-color: var(--main_dark);
+    border-radius: 0 0 8px 8px ;
+}
+
+.key-light{
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+
+.off{
+    background-color: #342222;
+}
+
+.on{
+    background-color: #D92E31;
+}
+
+.key{
+    cursor: pointer;
+    width: 80%;
+    min-height: 150px;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 30%, rgba(170,166,166,1) 90%);
+}
+
+.key-name{
+    color:#171717;
+}
+
+.half-screen{
+    min-height: 50vh;
+}
+
+.border-grey-top{
+    border-top: var(--grey) solid 1px;
+}
+
+.login{
+    background-image: url("/images/background.jpg");
+    background-size:auto;
+    background-repeat:repeat;
+}
+
+.login form{
+    background-color: rgba(255, 255, 255, 0.5); /* 50% transparent white */
+}
+
+.login input{
+    padding: 8px 0px;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--grey);
+}
